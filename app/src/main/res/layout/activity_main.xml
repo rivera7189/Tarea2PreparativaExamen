@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iteso.tarea2.ActivityMain">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bicicleta_cafe"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:id="@+id/bici_imageView"
+            ></ImageView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:padding="0dp"
+            android:background="@android:color/black"/>
+        <RelativeLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TituloBicilceta"
+                android:textSize="@dimen/Titulo"
+                android:id="@+id/titulo_bici"
+                />
+            <ImageButton
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:src="@drawable/facebook"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/like"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/Color"
+                android:textSize="@dimen/SubTitulo"
+                android:layout_below="@+id/titulo_bici"
+                android:id="@+id/titulo_color"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radio_group"
+                android:layout_below="@+id/titulo_color">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/boton1"
+                    android:buttonTint="@color/gray_light"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/boton2"
+                    android:buttonTint="@color/brown"
+                    android:checked="true"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/boton3"
+                    android:buttonTint="@color/pink"
+
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/boton4"
+                    android:buttonTint="@color/black"
+                    />
+
+            </RadioGroup>
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="M."
+                android:id="@+id/botonM"
+                android:background="@drawable/borde_redondo"
+                android:layout_below="@+id/radio_group"
+                android:layout_marginHorizontal="5dp"
+                />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/borde_redondo"
+                android:text="S"
+                android:id="@+id/botonS"
+                android:layout_below="@+id/radio_group"
+                android:layout_toEndOf="@id/botonM"
+                android:layout_toRightOf="@id/botonM"
+                android:layout_marginHorizontal="5dp"/>
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/borde_redondo"
+                android:id="@+id/botonL"
+                android:text="L"
+                android:layout_toEndOf="@id/botonS"
+                android:layout_toRightOf="@id/botonS"
+                android:layout_below="@+id/radio_group"
+                android:layout_marginHorizontal="5dp"/>
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/borde_redondo"
+                android:id="@+id/botonXL"
+                android:text="XL"
+                android:layout_toEndOf="@id/botonL"
+                android:layout_toRightOf="@id/botonL"
+                android:layout_below="@+id/radio_group"
+                android:layout_marginHorizontal="5dp"
+              />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/Descripción"
+                android:textSize="@dimen/SubTitulo"
+                android:layout_below="@+id/botonM"
+                android:id="@+id/titulo_descripcion"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/Parrafo1"
+                android:textSize="@dimen/Texto"
+                android:layout_below="@+id/titulo_descripcion"
+                android:id="@+id/parrafo1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/Measurent"
+                android:textSize="@dimen/SubTitulo"
+                android:layout_below="@+id/parrafo1"
+                android:id="@+id/subtitulo2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/Parrafo2"
+                android:textSize="@dimen/Texto"
+                android:layout_below="@+id/subtitulo2"
+                android:id="@+id/parafo2"/>
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="@string/add"
+                android:background="@color/gray"
+                android:layout_below="@id/parafo2"
+                android:textColor="@color/white"
+                android:id="@+id/carrito"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</ScrollView>
